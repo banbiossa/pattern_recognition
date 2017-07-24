@@ -1,0 +1,18 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+
+
+# try making handwritten number recognition
+
+## table of contents
+1. read the data
+2. understand the data
+3. predict with knn
+```{r read}
+
+```
+
