@@ -3,6 +3,8 @@ title: "R Notebook"
 output: html_notebook
 ---
 
+- disclaimer
+all data come from http://yann.lecun.com/exdb/mnist/
 
 
 
@@ -13,6 +15,7 @@ output: html_notebook
 2. understand the data
 3. predict with knn
 ```{r read}
+df = read.table("data/t10k-labels.idx1-ubyte",sep=" ")
 
 ```
 

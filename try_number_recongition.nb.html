@@ -172,6 +172,9 @@ $(document).ready(function () {
 
 
 <!-- rnb-text-begin -->
+<ul>
+<li>disclaimer all data come from <a href="http://yann.lecun.com/exdb/mnist/" class="uri">http://yann.lecun.com/exdb/mnist/</a></li>
+</ul>
 <div id="try-making-handwritten-number-recognition" class="section level1">
 <h1>try making handwritten number recognition</h1>
 <div id="table-of-contents" class="section level2">
@@ -183,13 +186,21 @@ $(document).ready(function () {
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYgPSByZWFkLnRhYmxlKFwiZGF0YS90MTBrLWxhYmVscy5pZHgxLXVieXRlXCIsc2VwPVwiIFwiKVxuXG5gYGAifQ== -->
+<pre class="r"><code>df = read.table(&quot;data/t10k-labels.idx1-ubyte&quot;,sep=&quot; &quot;)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoibGluZSAxIGFwcGVhcnMgdG8gY29udGFpbiBlbWJlZGRlZCBudWxsc2luY29tcGxldGUgZmluYWwgbGluZSBmb3VuZCBieSByZWFkVGFibGVIZWFkZXIgb24gJ2RhdGEvdDEway1sYWJlbHMuaWR4MS11Ynl0ZSdFcnJvciBpbiByZWFkLnRhYmxlKFwiZGF0YS90MTBrLWxhYmVscy5pZHgxLXVieXRlXCIsIHNlcCA9IFwiIFwiKSA6IFxuICAg44OV44Kh44Kk44Or44Gu5YWI6aCt44GM56m644Gn44GZIFxuIn0= -->
+<pre><code>line 1 appears to contain embedded nullsincomplete final line found by readTableHeader on 'data/t10k-labels.idx1-ubyte'Error in read.table(&quot;data/t10k-labels.idx1-ubyte&quot;, sep = &quot; &quot;) : 
+   ファイルの先頭が空です </code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCg0KDQojIHRyeSBtYWtpbmcgaGFuZHdyaXR0ZW4gbnVtYmVyIHJlY29nbml0aW9uDQoNCiMjIHRhYmxlIG9mIGNvbnRlbnRzDQoxLiByZWFkIHRoZSBkYXRhDQoyLiB1bmRlcnN0YW5kIHRoZSBkYXRhDQozLiBwcmVkaWN0IHdpdGgga25uDQpgYGB7ciByZWFkfQ0KDQpgYGANCg0K</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQotIGRpc2NsYWltZXINCmFsbCBkYXRhIGNvbWUgZnJvbSBodHRwOi8veWFubi5sZWN1bi5jb20vZXhkYi9tbmlzdC8NCg0KDQoNCiMgdHJ5IG1ha2luZyBoYW5kd3JpdHRlbiBudW1iZXIgcmVjb2duaXRpb24NCg0KIyMgdGFibGUgb2YgY29udGVudHMNCjEuIHJlYWQgdGhlIGRhdGENCjIuIHVuZGVyc3RhbmQgdGhlIGRhdGENCjMuIHByZWRpY3Qgd2l0aCBrbm4NCmBgYHtyIHJlYWR9DQpkZiA9IHJlYWQudGFibGUoImRhdGEvdDEway1sYWJlbHMuaWR4MS11Ynl0ZSIsc2VwPSIgIikNCg0KYGBgDQoNCg==</div>
 
 
 
