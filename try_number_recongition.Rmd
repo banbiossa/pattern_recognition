@@ -3,6 +3,7 @@ title: "R Notebook"
 output: html_notebook
 ---
 
+all data come from http://yann.lecun.com/exdb/mnist/
 
 - all data from http://yann.lecun.com/exdb/mnist/
 - the kaggle data is easier https://www.kaggle.com/c/digit-recognizer/data
@@ -31,6 +32,7 @@ df = fread("data/train.csv")
 df
 
 head(df)
+df = read.table("data/t10k-labels.idx1-ubyte",sep=" ")
 
 ```
 
