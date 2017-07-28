@@ -4,6 +4,8 @@ output: html_notebook
 ---
 
 
+- all data from http://yann.lecun.com/exdb/mnist/
+- the kaggle data is easier https://www.kaggle.com/c/digit-recognizer/data
 
 
 # try making handwritten number recognition
@@ -12,7 +14,56 @@ output: html_notebook
 1. read the data
 2. understand the data
 3. predict with knn
+
 ```{r read}
+library(data.table)
+to.read = "data/t10k-labels.idx1-ubyte"
+
+readBin(to.read, integer(),n=4,endian='small')
+
+readBin(to.read, integer(),n=1,endian='big')
+
+readChar(to.read,nchars = 4)
+
+df = read.csv("data/train.csv")
+
+df = fread("data/train.csv")
+df
+
+head(df)
 
 ```
+
+```{r make a figure}
+make_figure = function(x){ 
+        # x is a vector of length 784
+        m = matrix(rep(0,784),28,28)
+        x = as.vector(x)
+        for(i in 1:28){
+                for(j in 1:28){
+                        m[i,j] = x[28*(i-1)+j]
+                }
+        }
+        return(m)
+}
+
+library(dplyr)
+pic = df %>% select(-label)
+a = make_figure(pic[1])
+```
+
+```{r make pic}
+a = as.numeric(pic[1])
+f = make_figure(a)
+library(gplots)
+heatmap.2(f,dendrogram='none', 
+          Rowv=FALSE, Colv=FALSE,trace='none',
+          symm = TRUE)
+
+```
+
+```{r}
+
+```
+
 
